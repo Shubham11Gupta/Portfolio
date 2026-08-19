@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b0c0f;
+  --charcoal: #0f1115;
+  --accent: #7c5cff;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, rgba(11,12,15,1) 0%, rgba(15,16,20,1) 100%);
+}
+
+/* subtle grid */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px;
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* small component helpers */
+.btn-primary{background:linear-gradient(90deg,var(--accent),#5fd3ff);color:#fff}
+
