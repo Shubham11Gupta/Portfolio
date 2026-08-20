@@ -1,8 +1,4 @@
-node_modules
-dist
-.env
-.vscode
+tmp
 .git
 .gitignore
-npm-debug.log
-.DS_Store
+server/data/contact-submissions.json
