@@ -1,40 +1,7 @@
-# Node
-node_modules/
-.npm/
+node_modules
+dist
 .env
 .env.*
-npm-debug.log*
-package-lock.json
-
-# Build outputs
-dist/
-.build/
-
-# Vite cache
-.vite/
-
-# Logs
-logs
 *.log
-
-# OS
-.DS_Store
-Thumbs.db
-
-# IDEs
-.vscode/
-.idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-
-# Docker
-docker-compose.override.yml
-
-# Misc
-.cache/
-*.env.local
-
-# Do NOT ignore public/resume.pdf (keep resume in repo)
-# public/resume.pdf
+tmp
+server/data/contact-submissions.json
