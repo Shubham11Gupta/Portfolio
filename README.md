@@ -43,3 +43,16 @@ The form posts to the Node backend and stores submissions in `server/data/contac
 docker build -t shubham-gupta-portfolio .
 docker run -p 4000:4000 shubham-gupta-portfolio
 ```
+
+## Vercel
+
+Vercel runs deployments as static files and serverless functions; it does not
+run the Docker `CMD` as a long-lived Node server. The `api/` directory contains
+the Vercel handlers used by the frontend, while the Docker setup remains
+available for local and container deployments.
+
+To enable the contact form on Vercel, add a `CONTACT_WEBHOOK_URL` environment
+variable pointing to a service that accepts the JSON payload. Vercel's
+filesystem is ephemeral, so `server/data/contact-submissions.json` is suitable
+for the Docker deployment only and must not be used as persistent storage on
+Vercel.
